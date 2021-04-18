@@ -1,0 +1,15 @@
+{"/dj_user/out/login/loginByPhoneV2?usr=j27871222&rgt=7&p1=V3WygQ4dlCADADL64yvBGhkY&pc=10&p2=124011&p3=17126056&p4=501656&p5=12&p6=&p7=__3e932cc0f202a00f&p9=2&p12=&p16=vivo+Y51A&p21=3&p22=5.1.1&p25=17126056&p26=22 HTTP/1.1":
+    ["我的_登录","是","post","","","code+message",""],
+"/zyuc/api/user/my/tab?sign=V3z41RGggYY2NhLOa1UZk4lUEEsvUP2LShuluZgZc/1I4lcw6h8mTh/NfCRqZTDoAt7wj+EgA7KuzyZJIGsa//YQDOPpfCV2FGB/JfqPLUdDK7VLng+W8gtw7BjYF2Xl4qLQOEMnEcim3KFY3Tb1vu23plv0YTruIO1bERLUB3w=&timestamp=1595756193640&usr=j28331372&zyeid=f622652b-52d3-4059-84e2-75b52d6dffad&usr=j28331372&rgt=7&p1=V3WygQ4dlCADADL64yvBGhkY&ku=j28331372&kt=7c589265807dc50ff4dc70ef29c4cbc1&pc=10&p2=124011&p3=17126056&p4=501656&p5=12&p6=&p7=__3e932cc0f202a00f&p9=2&p12=&p16=vivo+Y51A&p21=3&p22=5.1.1&p25=17126056&p26=22 HTTP/1.1":
+["我的_点击我的tab","是","get","","","code","0"],
+"/zybk/api/ad/adconfig?ip=111.194.219.35&timestamp=1613728431246&pluginVersion=148&zyeid=7264245f-c66f-4659-aa24-9bb6df37c4f4&usr=j35532181&rgt=7&p1=V3WygQ4dlCADADL64yvBGhkY&pc=10&p2=124008&p3=17136556&p4=501656&p5=12&p6=&p7=__3e932cc0f202a00f&p9=2&p12=&p16=vivo+Y51A&p21=3&p22=5.1.1&p25=17136556&p26=22&p28=&p30=__624900019789874&p31=__3e932cc0f202a00f":
+["广告排期接口","是","get","","","json",""],
+"https://api.gamecenter.viaweb.cn/list?vmedia=85":
+["我的_益智游戏","是","get","","","json",""],
+"/zycl/api/pop/index?sign=Kaj791G7wA3uCoCaVbteP6imexhtZT1L1ckO5kefVcYteT1%2BzfCjlMW8iBkRlT5qbamGb45rAcTDw5P2HhZHQPqfGvF%2FZe9GyejH%2ByD59kD5kWRSvRG4iIDPIHFTGKk4uP%2FWlD%2Bk%2BPR6Gfoq8A1u6zkDAW9dAae5rU5clZh%2B0xQ%3D&timestamp=1615534450906&zyeid=10ff221c-76c0-408f-8863-5b25a9e4c696&usr=j36679838&rgt=7&p1=XpPJvuBnnuEDAHddpZZH56Vq&ku=j36679838&kt=c7804adeb806c5fd1aaa22f91bf78b58&pc=10&p2=124002&p3=17139556&p4=501656&p5=19&p6=&p7=__d7654a6432f2a714&p9=2&p12=&p16=ELE-AL00&p21=20303&p22=10&p25=17139556&p26=29&p28=fbbe7e8f-ebb7-7fc9-35af-4fd7f6f384ae&p30=&p31=__d7654a6432f2a714&pluginVersion=29&unique=b807c5c0,6e5d309f":
+["客户端弹窗","是","get","","","code+message",""],
+"/zycl/api/glod/getConfig?sign=ZOd%2FivwAefNUa7jeoi78uk%2Fuuup6ODnjyr0PNCze2tR6hzdbkIt5hsfrEKo7fv9Eg78vGblhyivBlO5RYBWC8xYb4h7vEONKnnfe91Uq0F7YLjuNmZt%2FTdCcuUuxjeWK%2BYstem7mc%2Fm0Q5mq4y2aPNWjAai1kueoS%2Frsj0tc5Rw%3D&timestamp=1601013331499&zyeid=0582e5b8-f646-4bf7-9842-2a06a2970377&usr=j30152680&rgt=7&p1=XCQ1k1BAVu4DAEaZxrZy3J1B&pc=10&p2=124001&p3=17131056&p4=501656&p5=19&p6=IJIGAAGBABCAFAABBECG&p7=__01e2536d9b435982&p9=0&p12=&p16=V1816A&p21=31303&p22=9&p25=17131056&p26=28&p28=1cc5b0ceb46e826687ec312e11c2a1cf49aa717e38ecdb64c417b9329be57788&type=17,16,999,19,20":
+["金币任务接口","是","get","","","code","0"],
+"/zybk/api/ad/adList?backType=welfare&zyeid=2023434d-c7c7-4ebf-a06a-32f2be976216&usr=j30240570&rgt=7&p1=XCQ1k1BAVu4DAEaZxrZy3J1B&ku=j30240570&kt=0766409a2c6ffa860b20ecd6d76b63a9&pc=10&p2=124001&p3=17131056&p4=501656&p5=19&p6=IJIGAAGBABCAFAABBECG&p7=__01e2536d9b435982&p9=0&p12=&p16=V1816A&p21=31303&p22=9&p25=17131056&p26=28&p28=1cc5b0ceb46e826687ec312e11c2a1cf49aa717e38ecdb64c417b9329be57788":
+["福利tab广告墙","是","get","","","code","0"]
+}

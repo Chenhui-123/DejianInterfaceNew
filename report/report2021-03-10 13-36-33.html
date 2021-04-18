@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>Test</h1>
+<p class='attribute'><strong>Start Time:</strong> 2021-03-10 13:36:33</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:03.706792</p>
+<p class='attribute'><strong>Status:</strong> Pass 6 Error 1</p>
+
+<p class='description'>测试报告</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcase.test_bookstore.TestBookStore</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_frequencyDetailFemale</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: --------------------this is setup--------------------------
+测试通过
+--------------------this is teardown--------------------------
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_frequencyDetailRecommended</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: --------------------this is setup--------------------------
+测试通过
+--------------------this is teardown--------------------------
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_frequencyFemale</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: --------------------this is setup--------------------------
+测试通过
+--------------------this is teardown--------------------------
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_frequencyRecommended</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: --------------------this is setup--------------------------
+测试通过
+--------------------this is teardown--------------------------
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcase.test_my.TestMy</td>
+    <td>3</td>
+    <td>2</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c2',3)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: --------------------this is setup--------------------------
+{
+    "code": 0,
+    "msg": "ok",
+    "body": {
+        "userName": "j34870881",
+        "token": "e376ada459322a1ef70a67475c7de9a6",
+        "authToken": "0b152740d6123f427182e01553fffbad",
+        "uid": "auth_token:0b152740d6123f427182e01553fffbad",
+        "zyeId": "167b4a79-a747-473b-beeb-17cbedb8927d",
+        "regType": "7",
+        "usrMsg": {
+            "nick": "\u5c0f\u5415\u5c0f\u5415\uff0c\u5014\u5f3a\u5230\u5e95",
+            "realNick": "\u5c0f\u5415\u5c0f\u5415\uff0c\u5014\u5f3a\u5230\u5e95",
+            "avatar": "",
+            "realAvatar": "",
+            "bindPhone": "11111111111",
+            "bindQQ": null,
+            "bindWechat": null,
+            "user": null
+        }
+    }
+}
+测试通过
+--------------------this is teardown--------------------------
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_myTab</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: --------------------this is setup--------------------------
+{
+    "code": 0,
+    "body": {
+        "isLogin": 0,
+        "userInfo": {
+            "userNick": "",
+            "phone": "",
+            "avatar": "https://bookbk.img.zhangyue01.com/idc_1/group61/M00/92/01/CmQUOVySDESEWlEnAAAAAF4frTY913006046.png?v=o9quIi4u&amp;t=CmQUOVySDEQ.",
+            "vipInfo": {
+                "vipType": 0,
+                "vipExpire": 0,
+                "expireDate": "",
+                "halfScreen": "https://dj.palmestore.com/zytc/public/index.php?ca=FreeVip.Index&amp;source=book",
+                "fullScreen": "https://dj.palmestore.com/zytc/public/index.php?ca=FreeVip.Index&amp;source=mine",
+                "description": "\u5f00\u901a\u7279\u6743",
+                "content": "\u70b9\u51fb\u8fdb\u5165\u8d2d\u4e70\u7279\u6743"
+            }
+        },
+        "sign": {
+            "title": "\u7b7e\u5230",
+            "url": ""
+        },
+        "share": {
+            "title": "\u5206\u4eab",
+            "switch": "1"
+        },
+        "readrank": {
+            "desc": "\u672c\u5468\u9605\u8bfb\u65f6\u957f\u8d85\u8d8a0%\u8bfb\u8005",
+            "isShow": 0,
+            "url": "https://dj.palmestore.com/zyuc/homepage/readrank?source=mine"
+        },
+        "tab": [
+            {
+                "title": "\u6211\u7684\u8d26\u6237",
+                "url": "https://dj.palmestore.com/zyuc/user/account?source=mine",
+                "isShow": 1,
+                "description": "",
+                "type": "web",
+                "icon": "https://bookbk.img.zhangyue01.com/idc_1/m_1,w_200,h_266/7c886786/group61/M00/43/7C/CmQUOF26p0WEOG-DAAAAAHYfaDY712343581.png?v=Y3nZHjxw&amp;t=CmQUOF26p0U.",
+                "login": 1,
+                "subtype": "my_account",
+                "ext": {}
+            },
+            {
+                "title": "\u9886\u798f\u5229",
+                "url": "https://dj.palmestore.com/zycl/gold/index?source=mine",
+                "isShow": 1,
+                "description": "",
+                "type": "web",
+                "icon": "https://bookbk.img.zhangyue01.com/idc_1/m_1,w_200,h_266/e9010b2c/group61/M00/C1/6C/CmQUOF6dQSuESHQ9AAAAAGmfA7M610178392.png?v=w450Vfav&amp;t=CmQUOF6dQSs.",
+                "login": 0,
+                "subtype": "welfare",
+                "ext": {}
+            },
+            {
+                "title": "\u9605\u8bfb\u8bb0\u5f55",
+                "url": "",
+                "isShow": 1,
+                "description": "",
+                "type": "local",
+                "icon": "https://bookbk.img.zhangyue01.com/idc_1/m_1,w_200,h_266/a3c4164f/group61/M00/43/85/CmQUOV26p0WECoQVAAAAAJX-nTc329941962.png?v=2ojlB08N&amp;t=CmQUOV26p0U.",
+                "login": 0,
+                "subtype": "read_record",
+                "ext": {}
+            },
+            {
+                "title": "\u8bbe\u7f6e",
+                "url": "",
+                "isShow": 1,
+                "description": "",
+                "type": "local",
+                "icon": "https://bookbk.img.zhangyue01.com/idc_1/m_1,w_200,h_266/dbe01d0b/group61/M00/43/7C/CmQUOF26p0WETYqPAAAAAFxMIfY740769821.png?v=lGSjUpSp&amp;t=CmQUOF26p0U.",
+                "login": 0,
+                "subtype": "setting",
+                "ext": {}
+            },
+            {
+                "title": "\u591c\u95f4\u6a21\u5f0f",
+                "url": "",
+                "isShow": 1,
+                "description": "",
+                "type": "switch",
+                "icon": "https://bookbk.img.zhangyue01.com/idc_1/m_1,w_200,h_266/ac92d3c5/group61/M00/43/85/CmQUOV26p0WEDwY4AAAAAJQCamM110149262.png?v=GXLVpQo6&amp;t=CmQUOV26p0U.",
+                "login": 0,
+                "subtype": "night_model",
+                "ext": {}
+            }
+        ],
+        "read": {
+            "time": 0,
+            "week": 0,
+            "total": 0
+        },
+        "vipBanner": {
+            "title": "\u5f97\u95f4\u7279\u6743",
+            "desc": "\u5c0a\u4eab\u65e0\u5e7f\u544a\u3001\u542c\u4e66\u7b49\u7279\u6743",
+            "button": {
+                "name": "\u5f00\u901a",
+                "url": "https://dj.palmestore.com/zytc/public/index.php?ca=FreeVip.Index&amp;source=mine"
+            },
+            "buddleText": ""
+        },
+        "amount": 877,
+        "switch": 0,
+        "gold": {
+            "isShow": 1,
+            "goldAmount": 2552,
+            "url": "https://dj.palmestore.com/zycl/gold/withdraw?source=mine"
+        }
+    },
+    "msg": ""
+}
+--------------------this is teardown--------------------------
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_yizhiGame</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
+        error</a>
+
+    <div id='div_ft2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.3: --------------------this is setup--------------------------
+--------------------this is teardown--------------------------
+Traceback (most recent call last):
+  File "D:\DejianInterface\testcase\test_my.py", line 56, in test_yizhiGame
+    res=request_base.send_method('get',url_yizhiGame,'')
+  File "D:\DejianInterface\Base\base_request.py", line 28, in send_method
+    res=self.send_get(url,data).json()
+  File "D:\python\lib\site-packages\requests\models.py", line 898, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\python\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "D:\python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\python\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>7</td>
+    <td>6</td>
+    <td>0</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
