@@ -13,7 +13,7 @@ class PostEmail:
         mail_pass = "TYHYHPHEVJPZKWRF"  # 密码(这里的密码不是登录邮箱密码，而是授权码)
 
         sender = '15010588693@163.com'  # 发件人邮箱
-        receivers = ['chenhui@zhangyue.com','zhangle@zhangyue.com']  # 接收人邮箱
+        receivers = ['chenhui@zhangyue.com','zhang111le@zhangyue.com']  # 接收人邮箱
 
         msgRoot = MIMEMultipart()
         msgRoot['Subject'] = subject
@@ -47,4 +47,4 @@ class PostEmail:
 postEmail=PostEmail()
 if __name__=='__main__':
     postEmail=PostEmail()
-    postEmail.post_email("发送附件测试", "python 邮件")
+    #postEmail.post_email("发送附件测试", "python 邮件")
